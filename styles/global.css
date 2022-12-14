@@ -1,0 +1,229 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap");
+
+@layer base {
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  img,
+  ul,
+  li,
+  form,
+  label,
+  aside,
+  footer,
+  header,
+  nav,
+  section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  article,
+  aside,
+  figure,
+  footer,
+  header,
+  section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+    overflow-x: hidden;
+    font-family: "Roboto", sans-serif;
+  }
+
+  ol,
+  ul {
+    list-style: none;
+  }
+
+  #__next {
+    @apply w-screen h-screen col-center;
+  }
+
+  button {
+    @apply cursor-pointer rounded-lg;
+  }
+
+  input {
+    @apply w-full h-9 focus:outline-0 pr-px pl-1 placeholder:text-gray-600 focus:placeholder:text-gray-200 rounded-lg focus:border-none;
+  }
+}
+
+@layer components {
+  /* Landing Page */
+  .col-center {
+    @apply flex flex-col items-center;
+  }
+
+  .delay {
+    @apply ease-in-out transition delay-300;
+  }
+
+  .btn-yellow {
+    @apply bg-yellow-500 w-full h-10 font-bold text-xl text-gray-900 hover:bg-yellow-400 hover:text-primary;
+  }
+
+  .logo {
+    @apply text-yellow-400 font-bold;
+  }
+
+  .figure-icon {
+    @apply w-3/5 max-w-[230px] sm:max-w-none sm:w-60 delay absolute sm:hover:animate-pulse duration-200;
+  }
+
+  .main {
+    @apply col-center w-screen sm:flex-row-reverse sm:justify-center sm:items-start min-h-screen bg-primary;
+  }
+
+  .main-div {
+    @apply col-center mt-8 gap-y-6 sm:ml-52 h-4/6 sm:pb-0 pb-5 w-full;
+  }
+
+  .aside_desktop {
+    @apply h-screen w-52 justify-start absolute left-0 top-0 z-20;
+  }
+
+  .aside-dark {
+    @apply col-center justify-around w-full h-48 sm:aside_desktop bg-primary-dark z-30;
+  }
+
+  .footer {
+    @apply w-full flex justify-center sm:mt-10 sm:justify-end sm:absolute sm:bottom-0 bg-primary z-10;
+  }
+
+  .nav_footer {
+    @apply text-yellow-400 flex justify-around w-3/4 text-sm my-3;
+  }
+
+  .social {
+    @apply text-white text-2xl;
+  }
+
+  /* Modal Login */
+
+  .modal-contaneir {
+    @apply h-screen w-full fixed flex px-5 justify-center items-center duration-500  z-50;
+  }
+
+  .modal-contaneir2 {
+    @apply h-screen w-full bg-background-color-cloudy fixed flex px-5 justify-center items-center  z-50;
+  }
+
+  .modal-div-container {
+    @apply col-center max-w-sm w-full text-white bg-primary-dark rounded-3xl pb-10 duration-500 delay  relative;
+  }
+  .modal-form-label {
+    @apply self-start text-headline3 font-bold leading-[17.58px];
+  }
+
+  .modal-form-div-input {
+    @apply flex bg-primary-ligth rounded-lg pl-2.5 w-full items-center border-indigo-500/0 focus:border-yellow-400/70 border-[3px] border-solid;
+  }
+
+  .modal-form-input {
+    @apply bg-primary-ligth;
+  }
+
+  .form_mensage_alert {
+    @apply text-rose-600 font-semibold text-[14px];
+  }
+
+  /* Home Page */
+
+  .main-Home {
+    @apply w-full min-h-full col-center sm:flex-row sm:justify-between z-20 relative top-0;
+  }
+
+  .aside-home {
+    @apply w-full sm:flex bg-primary text-slate-300 sm:h-full fixed top-0 sm:w-auto ease-in-out duration-500 z-30;
+  }
+
+  .aside-bar {
+    @apply hidden relative w-12 text-2xl sm:flex flex-col ml-5 h-96 justify-around mt-14;
+  }
+  .aside-bar-logout {
+    @apply hidden sm:flex absolute bottom-9 text-2xl text-white ml-5 z-50;
+  }
+
+  .aside-div {
+    @apply relative left-0 z-50 sm:h-full bg-primary delay;
+  }
+  .aside-div-hidden {
+    @apply left-[-700%] absolute delay h-full z-50;
+  }
+
+  .aside-nav {
+    @apply w-44 flex flex-col ml-5 h-96 justify-around mt-14 bg-primary;
+  }
+
+  .aside-nav-btn {
+    @apply flex items-center gap-4 hover:text-white text-base font-medium hover:text-lg h-12 hover:scale-110;
+  }
+
+  .aside-nav-logout {
+    @apply aside-nav-btn sm:absolute bottom-6;
+  }
+
+  .section-mobile {
+    @apply col-center w-full sm:col-center sm:w-full gap-4 pb-4 absolute top-0;
+  }
+  .section-div {
+    @apply col-center w-90 max-w-[1000px] gap-4 pt-4 rounded-lg justify-center h-full text-center text-white mt-14;
+  }
+
+  .section-div-games {
+    @apply col-center w-90 max-w-[1000px] gap-4 pt-4 rounded-lg pb-8;
+  }
+
+  /* Home Tibia */
+
+  /* Cards*/
+  .card-info {
+    @apply text-[12px] font-extrabold text-gray-500;
+  }
+
+  .card-p-data {
+    @apply text-sm font-extrabold text-gray-500;
+  }
+
+  .card-span-data {
+    @apply text-[#4bc139];
+  }
+
+  .section-div-header {
+    @apply w-full pb-8 sm:pb-0 bg-[#000000a4] gap-5 rounded-lg sm:max-h-48  sm:ml-10 sm:flex sm:items-center;
+  }
+
+  .section-div-header-form-div {
+    @apply col-center w-full gap-3 justify-center;
+  }
+
+  .icon-yellow {
+    @apply text-2xl text-yellow-400 sm:hidden;
+  }
+
+  .section-div-header-choose-ul {
+    @apply w-90 h-40 sm:h-full flex-col flex  gap-2 overflow-y-auto py-3 mt-1 sm:mt-0;
+  }
+}
